@@ -8,11 +8,27 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     padding: 20px;
+    background-color: #fff;
+}
+
+@media (max-width: 720px) {
+    header {
+        padding: 10px;
+    }
 }
 
 .header__logo {
     height: 30px;
+}
+
+@media (max-width: 720px) {
+    .header__logo {
+        height: 20px;
+    }
 }
 
 a {
@@ -37,6 +53,7 @@ button {
     box-shadow: 0 16px 36px rgb(52 213 68 / 22%);
     padding: 15px;
 }
+
 button:hover {
     background-color: #f6980c;
     box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
@@ -49,14 +66,41 @@ button:hover {
     align-items: center;
     padding-bottom: 115px;
     padding-top: 115px;
-    background: url('img/back.png') no-repeat;
+    background: url('src/img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+@media (max-width: 720px) {
+    .about {
+        flex-direction: column-reverse;
+        padding: 50px 10px;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    .about {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .about h1 {
     font-size: 76px;
     line-height: 76px;
+}
+
+@media (max-width: 720px) {
+    .about h1 {
+        font-size: 36px; 
+        line-height: 40px;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    .about h1 {
+        font-size: 36px; line-height: 40px
+    }
 }
 
 .about p {
@@ -79,10 +123,37 @@ button:hover {
 .about__image {
     width: 500px;
 }
+
+@media (max-width: 720px) {
+    .about__image {
+        width: 280px;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    .about__image {
+        width: 280px;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
    
 .about__sun-image {
-    width: 100px;
-    height: 100px;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .form {
@@ -94,6 +165,19 @@ button:hover {
     padding-top: 115px; 
     padding-bottom: 115px;
     text-align: center;
+}
+
+@media (max-width: 720px) {
+    .form {
+        padding: 50px 10px;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    .form {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .form__container {
@@ -156,10 +240,30 @@ footer {
     font-weight: 600;
 }
 
+@media (max-width: 720px) {
+    footer {
+        padding: 50px 10px 0 10px;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+    }
+}
+
 .footer__container {
     display: flex;
     justify-content: center;
 
+}
+
+@media (max-width: 720px) {
+    .footer__container {
+        flex-direction: column;
+    }
 }
 
 .footer__copyright{
