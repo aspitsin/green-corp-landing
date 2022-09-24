@@ -344,8 +344,7 @@ footer {
 .card:nth-child(2) .card__logo{
     color: #ad1714;
 }
-
-.card:nth-child(2) .card__logo{
+.card:nth-child(3) .card__logo{
     color: #22a030;
 }
 
